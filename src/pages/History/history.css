@@ -1,0 +1,67 @@
+@keyframes title {
+  from {
+    font-weight: 500;
+  }
+  to {
+    font-weight: 900;
+  }
+}
+
+.image-container img {
+  filter: grayscale(100%);
+  width: 100%;
+}
+
+.image-container {
+  background-color: #2dad76;
+  height: 650px;
+  overflow: hidden;
+}
+
+.history {
+  background-color: #2e2e2e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  height: 3000px;
+}
+
+.history h2 {
+  font-weight: 700;
+  color: #2dad76;
+  animation: title 2s alternate infinite;
+}
+
+.about-container {
+  max-width: 700px;
+  position: sticky;
+  top: 0px;
+}
+
+.intro {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 35px;
+}
+
+.quote {
+  font-size: 16px;
+  font-style: italic;
+  text-align: left;
+  border-left: 10px solid #2dad76;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.not-hidden {
+  opacity: 1;
+  transition: all 1s;
+}

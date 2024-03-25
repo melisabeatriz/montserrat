@@ -1,0 +1,53 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  box-sizing: border-box;
+}
+
+.menu {
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu .menu-line {
+  transition: all 1s;
+
+  width: 30px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #fff;
+}
+
+.menu:hover .menu-line:first-of-type,
+.menu-button:focus .menu-line:first-of-type {
+  transition: all 0.5s;
+  transform: rotate(90deg) translate(8px, -1px);
+}
+
+.menu:hover .menu-line:last-of-type,
+.menu-button:focus .menu-line:last-of-type {
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.menu-button {
+  background-color: transparent;
+  border: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+/* 
+.collapsible-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vh;
+  height: 500px;
+  background-color: red;
+} */

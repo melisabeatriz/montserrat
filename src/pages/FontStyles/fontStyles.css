@@ -1,0 +1,66 @@
+.font-styles {
+  height: 800px;
+  background-color: #2dad76;
+  color: #fff;
+}
+
+.font-style-display {
+  display: flex;
+  text-align: left;
+  position: relative;
+  justify-content: center;
+}
+
+.font-style-display div:first-of-type {
+  display: flex;
+  width: 780px;
+}
+
+.font-style-display div:first-of-type p {
+  font-size: 60px;
+  margin: 0;
+}
+.font-style-display div:first-of-type p:first-of-type {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 440px;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.font-style-weight-specification {
+  font-weight: 300;
+  font-size: 14px;
+  transform: rotate(-90deg);
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  opacity: 0;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.font-style-display:hover .font-style-weight-specification {
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.not-hidden {
+  opacity: 1;
+  transition: all 1s;
+}
+
+.whereony {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
