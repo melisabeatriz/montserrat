@@ -8,7 +8,8 @@
   justify-content: space-around;
 }
 
-.type-tester-display button {
+.type-tester-display button,
+.type-tester .close-button {
   height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -73,7 +74,7 @@
   background-color: transparent;
   transition: all 0.2s;
   position: absolute;
-  top: 100px;
+  top: 300px;
   right: 0;
   width: 100%;
   caret-color: black;
@@ -105,4 +106,24 @@ input[type="range"]::-webkit-slider-thumb {
   font-weight: 500;
   color: white;
   cursor: pointer;
+}
+
+.type-tester-slider {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #2e2e2e;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  padding: 15px;
+  gap: 5px;
+  width: 200px;
+}
+
+.type-tester-header {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
 }

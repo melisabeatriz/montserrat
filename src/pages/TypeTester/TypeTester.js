@@ -32,28 +32,32 @@ const TypeTester = ({ onClose }) => {
           >
             italic
           </button>
-          <label htmlFor="weight-slider">weight</label>
-          <input
-            type="range"
-            min="100"
-            max="900"
-            step="100"
-            value={fontWeight}
-            id="weight-slider"
-            onChange={(e) => changeFontWeight(e)}
-          />
-          <label htmlFor="size-slider">size</label>
-          <input
-            type="range"
-            min="10"
-            max="200"
-            value={fontSize}
-            onChange={(e) => changeFontSize(e)}
-            id="size-slider"
-          />
-          <span className="material-symbols-outlined" onClick={onClose}>
-            cancel
-          </span>
+          <div className="type-tester-slider">
+            <label htmlFor="weight-slider">weight</label>
+            <input
+              type="range"
+              min="100"
+              max="900"
+              step="100"
+              value={fontWeight}
+              id="weight-slider"
+              onChange={(e) => changeFontWeight(e)}
+            />
+          </div>
+          <div className="type-tester-slider">
+            <label htmlFor="size-slider">size</label>
+            <input
+              type="range"
+              min="10"
+              max="200"
+              value={fontSize}
+              onChange={(e) => changeFontSize(e)}
+              id="size-slider"
+            />
+          </div>
+          <button className="close-button" onClick={onClose}>
+            <span className="material-symbols-outlined">close</span>
+          </button>
         </div>
         <input
           className="type-tester-input"
