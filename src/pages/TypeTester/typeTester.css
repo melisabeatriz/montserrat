@@ -74,7 +74,7 @@
   background-color: transparent;
   transition: all 0.2s;
   position: absolute;
-  top: 300px;
+  top: 30%;
   right: 0;
   width: 100%;
   caret-color: black;
@@ -85,7 +85,9 @@ input[type="range"] {
   height: 4px;
   cursor: pointer;
   border-radius: 2px;
+  flex-grow: 1;
 }
+
 input[type="range"]::-webkit-slider-thumb {
   border: 1px solid #2497e3;
   height: 18px;
@@ -100,30 +102,45 @@ input[type="range"]::-webkit-slider-thumb {
   height: 50px;
   width: 100px;
   border: 0;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #2e2e2e;
+  color: #eeeeee;
   font-size: 16px;
   font-weight: 500;
-  color: white;
   cursor: pointer;
+  transition: all 0.5s;
+}
+
+.type-tester-button:hover,
+.type-tester-slider:hover {
+  background-color: #616161 !important;
+  color: #eeeeee !important;
+  font-weight: 800;
 }
 
 .type-tester-slider {
   display: flex;
   align-items: center;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #2e2e2e;
   font-size: 16px;
   font-weight: 500;
-  color: white;
+  color: #eeeeee;
   padding: 15px;
   gap: 5px;
   width: 200px;
+  transition: all 0.5s;
 }
 
 .type-tester-header {
   margin-top: 20px;
   display: flex;
-  gap: 20px;
+  padding: 0 20px;
+}
+
+.type-tester-header-controller {
+  width: calc(100% - 50px);
+  display: flex;
   justify-content: center;
+  gap: 20px;
 }
