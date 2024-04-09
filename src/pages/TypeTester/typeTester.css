@@ -112,10 +112,15 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .type-tester-button:hover,
-.type-tester-slider:hover {
+.type-tester-slider:hover,
+.family-selector:hover {
   background-color: #616161 !important;
   color: #eeeeee !important;
   font-weight: 800;
+}
+
+.family-selector:hover {
+  cursor: pointer;
 }
 
 .type-tester-slider {
@@ -143,4 +148,42 @@ input[type="range"]::-webkit-slider-thumb {
   display: flex;
   justify-content: center;
   gap: 20px;
+}
+
+.type-tester input[type="radio"] {
+  visibility: hidden;
+  margin: 0;
+  width: 0;
+  height: 0;
+}
+
+.type-tester input[type="radio"]:checked + label {
+  background-color: #bbb !important;
+  font-weight: 600 !important;
+  color: white !important;
+}
+
+.family-selector {
+  transition: all 0.5s;
+  background-color: #2e2e2e;
+  color: white;
+  border: 1px solid #bbb;
+  border-right: none;
+  padding: 15px;
+  height: 50px;
+  box-sizing: border-box;
+  width: 120px;
+}
+
+.family-selector:first-of-type {
+  border-radius: 10px 0 0 10px;
+}
+
+.family-selector:last-of-type {
+  border-radius: 0 10px 10px 0;
+  border-right: 1px solid #bbb;
+}
+
+.family-selector-container {
+  display: flex;
 }

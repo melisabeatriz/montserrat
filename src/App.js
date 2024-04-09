@@ -4,6 +4,7 @@ import Start from "./pages/Start/Start";
 import FontStyles from "./pages/FontStyles/FontStyles";
 import History from "./pages/History/History";
 import TypeTesterDisplay from "./pages/TypeTester/TypeTester";
+import SisterFamilies from "./pages/SisterFamilies/SisterFamilies";
 import NavBar from "./components/NavBar/NavBar";
 
 const ScrollContext = createContext(0);
@@ -31,6 +32,7 @@ function App() {
         <Start />
         <FontStyles />
         <History />
+        <SisterFamilies />
         <TypeTesterDisplay />
       </ScrollContext.Provider>
     </div>

@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./typeTester.css";
 
+const FAMILY_REGULAR = "Montserrat";
+const FAMILY_ALTERNATES = "Montserrat Alternates";
+const FAMILY_SUBRAYADA = "Montserrat Subrayada";
+
 const TypeTester = ({ onClose }) => {
   const [fontWeight, setFontWeight] = useState(400);
   const [fontSize, setFontSize] = useState(150);
+  const [fontFamily, setFontFamily] = useState(FAMILY_REGULAR);
   const [isItalic, setIsItalic] = useState(false);
   const [test, setTest] = useState("type here");
 
@@ -13,6 +18,20 @@ const TypeTester = ({ onClose }) => {
 
   const changeFontSize = (e) => {
     setFontSize(e.target.value);
+  };
+
+  const changeFamily = (e) => {
+    const value = Number(e.target.value);
+
+    if (value === 1) {
+      setFontFamily(FAMILY_REGULAR);
+    }
+    if (value === 2) {
+      setFontFamily(FAMILY_ALTERNATES);
+    }
+    if (value === 3) {
+      setFontFamily(FAMILY_SUBRAYADA);
+    }
   };
 
   useEffect(() => {
@@ -27,6 +46,41 @@ const TypeTester = ({ onClose }) => {
       <div className="type-tester">
         <div className="type-tester-header">
           <div className="type-tester-header-controller">
+            <div className="family-selector-container">
+              <input
+                type="radio"
+                id="regular"
+                name="family"
+                value={1}
+                defaultChecked
+                onClick={(e) => changeFamily(e)}
+              />
+              <label className="family-selector" htmlFor="regular">
+                regular
+              </label>
+
+              <input
+                type="radio"
+                id="alternates"
+                name="family"
+                value={2}
+                onClick={(e) => changeFamily(e)}
+              />
+              <label className="family-selector" htmlFor="alternates">
+                alternates
+              </label>
+
+              <input
+                type="radio"
+                id="subrayada"
+                name="family"
+                value={3}
+                onClick={(e) => changeFamily(e)}
+              />
+              <label className="family-selector" htmlFor="subrayada">
+                subrayada
+              </label>
+            </div>
             <button
               className="type-tester-button"
               onClick={() => setIsItalic(!isItalic)}
@@ -73,6 +127,7 @@ const TypeTester = ({ onClose }) => {
             zIndex: isItalic ? 0 : 500,
             fontWeight: fontWeight,
             fontSize: `${fontSize}px`,
+            fontFamily: fontFamily,
           }}
           onChange={(e) => setTest(e.target.value)}
           value={test}
@@ -85,6 +140,7 @@ const TypeTester = ({ onClose }) => {
             zIndex: isItalic ? 500 : 0,
             fontWeight: fontWeight,
             fontSize: `${fontSize}px`,
+            fontFamily: fontFamily,
           }}
           onChange={(e) => setTest(e.target.value)}
           value={test}

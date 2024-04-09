@@ -1,0 +1,33 @@
+.sister-families {
+  background-color: #2e2e2e;
+  color: white;
+  /* display: flex; */
+  padding: 40px;
+  padding-top: 300px;
+}
+
+.sister-families h2 {
+  font-size: 40px;
+  color: #2dad76;
+  text-align: right;
+  /* transform: rotate(-90deg);
+  position: absolute; */
+}
+
+.alternates {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 600;
+  font-size: 140px;
+  margin-top: 8;
+}
+
+.subrayada {
+  font-family: "Montserrat Subrayada", sans-serif;
+  font-size: 140px;
+  margin-top: 40px;
+}
+
+.families-display {
+  /* margin-left: 300px; */
+  text-align: left;
+}
